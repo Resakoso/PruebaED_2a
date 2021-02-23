@@ -3,13 +3,20 @@ package ed.examen.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author javirsk00_
+ *
+ */
 public class Curso {
 	
 	private List<Persona> listaAlumnos;
 
+	
 	/**
-	 * Este metodo elimina un alumno por medio de su DNI
-	 * @param DNI del alumno que queremos eliminar
+	 * @param dni
+	 *  Aquí se iserta el dni de la persona
+	 * @throws Exception: Comprueva que el dni esta bien de lo contrario lanza un error.
+	 * 	
 	 */
 	public void eliminarAlumno(String dni) throws Exception {
 		if(dni.length()==9) {//comprobar la longitud del dni
@@ -22,6 +29,7 @@ public class Curso {
 	/*
 	 * Documentar y crear test unitario
 	 * */
+
 	public void aniadirAlumno(Persona p) {
 		listaAlumnos.add(p);
 	}

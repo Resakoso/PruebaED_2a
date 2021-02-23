@@ -1,6 +1,9 @@
-package ed.examen.modelo;
+package ed.examen.app;
 
 import java.util.Scanner;
+
+import ed.examen.modelo.Curso;
+import ed.examen.modelo.Persona;
 
 public class Principal {
 
