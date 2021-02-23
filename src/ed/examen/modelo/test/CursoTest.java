@@ -10,7 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class CursoTest {
 	
 	Curso c = new Curso();
-
+	Persona p = new Persona("123456789Z", "Carlos", "Saenz");
+	
 	@Test
 	void testEliminarAlumno() {
 		
@@ -37,7 +38,7 @@ class CursoTest {
 
 	@Test
 	void testAniadirAlumno() {
-		Persona p = new Persona("123456789Z", "Carlos", "Saenz");
+		
 		int sizeBefore=c.numeroAlumnos();
 		c.aniadirAlumno(p);
 		int sizeAfter=c.numeroAlumnos();
@@ -46,7 +47,8 @@ class CursoTest {
 
 	@Test
 	void testEstaRegistrado() {
-		fail("Not yet implemented");
+		assertFalse(c.estaRegistrado(p.getDni()));
+		
 	}
 
 	@Test
