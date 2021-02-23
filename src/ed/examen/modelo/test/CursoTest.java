@@ -1,8 +1,10 @@
 package ed.examen.modelo.test;
 
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import ed.examen.modelo.Curso;
+import ed.examen.modelo.*;
+
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CursoTest {
@@ -35,7 +37,11 @@ class CursoTest {
 
 	@Test
 	void testAniadirAlumno() {
-		fail("Not yet implemented");
+		Persona p = new Persona("123456789Z", "Carlos", "Saenz");
+		int sizeBefore=c.numeroAlumnos();
+		c.aniadirAlumno(p);
+		int sizeAfter=c.numeroAlumnos();
+		assertEquals(sizeBefore,sizeAfter-1);
 	}
 
 	@Test
