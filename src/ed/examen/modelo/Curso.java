@@ -55,7 +55,7 @@ public class Curso {
 	public Curso() {
 		listaAlumnos= new ArrayList<Persona>();
 	}
-	
+
 	/*
 	 * Documentar y crear test unitario
 	 * */
