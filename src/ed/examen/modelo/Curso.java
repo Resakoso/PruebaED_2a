@@ -13,9 +13,9 @@ public class Curso {
 
 	
 	/**
-	 * @param dni
-	 *  Aquí se iserta el dni de la persona
-	 * @throws Exception: Comprueva que el dni esta bien de lo contrario lanza un error.
+	 * @param dni Aquí se iserta el dni de la persona
+	 *  
+	 * @throws Exception Comprueba que el dni esta bien de lo contrario lanza un error.
 	 * 	
 	 */
 	public void eliminarAlumno(String dni) throws Exception {
@@ -25,18 +25,24 @@ public class Curso {
 			throw new Exception("El dni no tiene la longitud adecuada");
 		}
 	}
-	
-	/*
-	 * Documentar y crear test unitario
-	 * */
 
+	/**
+	 * Un metodo para añadir un alumno.
+	 * 
+	 * @param p Añades aqui la persona
+	 */
 	public void aniadirAlumno(Persona p) {
 		listaAlumnos.add(p);
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	
+	/**
+	 * Un booleano que compruebe si el dni que metes está registrado.
+	 * 
+	 * @param dni Introduce el dni.
+	 * 
+	 * @return Devuelve true si el dni insertado coincide con uno de la lista.
+	 */
 	public Boolean estaRegistrado(String dni) {
 		int i =0;
 		Boolean encontrado=false;
@@ -49,19 +55,25 @@ public class Curso {
 		return encontrado;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	
+	/**
+	 * Un constructor que inicializa un arrayList
+	 */
 	public Curso() {
 		listaAlumnos= new ArrayList<Persona>();
 	}
 
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	
+	
+	/**
+	 * @return Devuelve la longitud de la lista 
+	 */
 	public Integer numeroAlumnos() {return listaAlumnos.size();}
 	
 	
+	/**
+	 * Muestra todos los alumnos en la lista
+	 */
 	public void mostrarTodos() {
 		for (Persona persona : listaAlumnos) {
 			System.out.println(persona);
