@@ -48,7 +48,6 @@ class CursoTest {
 	@Test
 	void testEstaRegistrado() {
 		assertFalse(c.estaRegistrado(p.getDni()));
-		
 	}
 
 	@Test
@@ -58,7 +57,7 @@ class CursoTest {
 
 	@Test
 	void testNumeroAlumnos() {
-		fail("Not yet implemented");
+		assertEquals(c.getListaAlumnos().size(), c.numeroAlumnos());
 	}
 
 }

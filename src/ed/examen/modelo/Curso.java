@@ -67,4 +67,9 @@ public class Curso {
 			System.out.println(persona);
 		}
 	}
+
+	public List<Persona> getListaAlumnos() {
+		return listaAlumnos;
+	}
+	
 }
